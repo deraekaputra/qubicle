@@ -1,0 +1,192 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+/**
+ * Hero
+ */
+
+.hero {
+  position: relative;
+}
+
+.heroTitle {
+  position: relative;
+  margin: 120px 0 76px;
+}
+
+.heroTitle .heroWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.heroTitle .heroWrapper .title {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  max-width: 500px;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.heroTitle .heroWrapper .title span {
+  display: inline-block;
+  position: relative;
+  padding: 3px 4.5px 4px;
+  background-color: #0C0C17;
+}
+
+.heroTitle .heroWrapper .switcher {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 30px;
+  border: 2px solid #0C0C17;
+}
+
+.heroTitle .heroWrapper .switcher li {
+  display: inline-block;
+  position: relative;
+}
+
+.heroTitle .heroWrapper .switcher li button {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 5px 12px 7px;
+  border: none;
+  background-color: none;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  font-weight: bold;
+  color: #0C0C17;
+  cursor: pointer;
+}
+
+.heroTitle .heroWrapper .switcher li button.active {
+  background-color: #0C0C17;
+  color: #FFFFFF;
+}
+
+
+/**
+ * Contents
+ */
+
+.contents {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.contentsBorder {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  border: 20px solid #08080F;
+}
+
+.contactContent {
+  position: relative;
+  max-width: 753px;
+  margin: 0 auto;
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.contactContent h2 {
+  position: relative;
+  margin: 0;
+  margin-top: 40px;
+  font-family: var(--font-family-base);
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #0C0C17;
+}
+
+.contactContent h2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: -16px;
+  width: 5px;
+  height: 25px;
+  background-color: #F25A2B;
+}
+
+.contactContent h2.contentTitle {
+  margin-top: 16px;
+}
+
+.contactContent h3 {
+  position: relative;
+  margin: 0;
+  margin-top: 40px;
+  margin-left: -27px;
+  font-family: var(--font-family-base);
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #0C0C17;
+}
+
+.contactContent p {
+  margin: 0;
+  margin-top: 24px;
+  font-family: var(--font-family-main);
+  font-size: 1.125rem;
+  line-height: 26px;
+  color: rgba(0, 0, 0, .84);
+}
+
+.contactContent p:first-child {
+  margin-top: 0;
+}
+
+.contactContent b {
+  font-weight: bold;
+}
+
+.contactContent a {
+  text-decoration: none;
+  color: #F25A2B;
+}
+
+.contentsDivider {
+  position: relative;
+  margin-top: 72px;
+}
+
+.contentsDivider svg {
+  display: block;
+  margin: 0 auto;
+}

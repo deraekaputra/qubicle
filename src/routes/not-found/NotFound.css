@@ -1,0 +1,94 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+.root {
+  position: relative;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #08080F;
+  z-index: 99;
+}
+
+.nav .navWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 579px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav .navWrapper .brand {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.contents {
+  position: relative;
+  width: 579px;
+  height: calc(100vh - 64px);
+  margin: 0 auto;
+  margin-top: 64px;
+  padding-top: 80px;
+}
+
+.contentsWrapper {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.contentsStatus {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #D8D8D8;
+}
+
+.contentsStatus h1 {
+  margin: 0;
+  font-size: 9rem;
+}
+
+.contentsTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #08080F;
+}
+
+.contentsTitle h1 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+}
+
+.contentsTitle h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.contentsTitle h3 a {
+  color: #08080F;
+}

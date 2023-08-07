@@ -1,0 +1,665 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+  min-height: calc(100vh - 108px);
+}
+
+.container {
+  position: relative;
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.fourCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((4 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sixCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((6 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.eightCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((8 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.twelveCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((12 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.readTime {
+  display: inline-block;
+  position: relative;
+  padding: 3px 7px 7px;
+  background-color: #0c0c17;
+  font-family: 'Lora', serif;
+  text-align: center;
+  z-index: 1;
+}
+
+.readTime span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.readTime small {
+  display: block;
+  font-size: 0.6875rem;
+  letter-spacing: 1.2px;
+}
+
+.interestLabel {
+  display: inline-block;
+  position: relative;
+  background-color: #0c0c17;
+  z-index: 1;
+}
+
+.interestLabel a {
+  display: block;
+  padding: 2px 7px 3px;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+
+/**
+* Card
+*/
+
+.card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card:hover .cardImage > .inner .text::after {
+  top: 50%;
+  left: 0;
+  opacity: .7;
+  -webkit-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -moz-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.card:hover .cardImage > .inner .overlay {
+  opacity: .6;
+}
+
+.card.trendingOne .cardImage {
+  padding-top: calc((136 / 367) * 100%);
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.cardImage > .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardImage > .inner .text {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cardImage > .inner .text::after {
+  display: block;
+  position: absolute;
+  margin: -.65em 0 0;
+  top: 50%;
+  left: 25%;
+  content: attr(data-text);
+  opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -moz-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  transition: opacity 0.3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.cardImage > .inner .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.cardImage .interestLabel {
+  position: absolute;
+  bottom: -10px;
+  left: 8px;
+}
+
+.cardImage .readTime {
+  position: absolute;
+  bottom: -10px;
+  right: 8px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  padding: 16px 8px 8px;
+}
+
+.cardTitle {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.cardTitle {
+  margin-bottom: 4px;
+}
+
+.cardTitle .title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cardTitle .title a {
+  text-decoration: none;
+  color: #0c0c17;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-top: 8px;
+  font-size: 0.937rem;
+}
+
+.cardMeta .metaAvatar {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.cardMeta .metaAvatar div {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.cardMeta .metaRight {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.cardMeta .metaRight .metaAuthor {
+  margin-bottom: 2px;
+}
+
+.cardMeta .metaAuthor {
+  color: #0c0c17;
+}
+
+.cardMeta .metaDate {
+  color: #9b9b9b;
+}
+
+
+/**
+ * Header
+ */
+
+.tagHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  z-index: 9;
+}
+
+.tagHeader.fixed {
+  position: fixed;
+  top: -22px;
+}
+
+.tagHeaderWrapper {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #ECECEC;
+}
+
+.tagHeaderWrapper .title {
+  max-width: 144px;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: var(--font-family-system);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0C0C17;
+}
+
+.tagWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.tagWrapper .indicator {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-right: 16px;
+}
+
+.tagWrapper .header {
+  margin: 0;
+  margin-top: 3px;
+  font-family: var(--font-family-main);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 5px 9px 7px;
+  background-color: #0C0C17;
+}
+
+.contents {
+  margin-top: 64px;
+  margin-bottom: 44px;
+  padding-top: 214px;
+}
+
+.relatedTags {
+  position: relative;
+  padding-right: 80px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.relatedTags .relatedTagsTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-family-system);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0C0C17;
+}
+
+.tag {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 2px 7px 3px;
+  background-color: #EAEAEA;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #0C0C17;
+  -webkit-transition: background-color .3s ease-in-out;
+  -moz-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.tag:hover {
+  background-color: color(#EAEAEA shade(20%));
+}
+
+.sectionTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-family-system);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0C0C17;
+}
+
+.viewMore {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  background-color: transparent;
+  border: 2px solid #0C0C17;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #0C0C17;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.viewMore:hover {
+  background-color: #0C0C17;
+  color: #FFFFFF;
+}
+
+.end {
+  position: relative;
+  width: 100%;
+  margin-top: 38px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.end h3 {
+  margin: 0;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+.notFound {
+  margin: 0;
+  margin-top: 20px;
+  font-family: var(--font-family-system);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+}
+
+
+/**
+ * Skeleton Loading
+ */
+
+ .skeleton {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.skeletonPrimary {
+  background-color: #CACACA;
+  background-image: -webkit-gradient(linear, left center, right center, from(#CACACA), color-stop(.2, #E7E7E7), color-stop(.4, #CACACA), to(#CACACA));
+  background-image: -webkit-linear-gradient(left, #CACACA 0%, #E7E7E7 20%, #CACACA 40%, #CACACA 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonSecondary {
+  background-color: #E7E7E7;
+  background-image: -webkit-gradient(linear, left center, right center, from(#E7E7E7), color-stop(.2, #CACACA), color-stop(.4, #E7E7E7), to(#E7E7E7));
+  background-image: -webkit-linear-gradient(left, #E7E7E7 0%, #CACACA 20%, #E7E7E7 40%, #E7E7E7 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonTitleOne {
+  position: relative;
+  width: 150px;
+  height: 22px;
+}
+
+.skeletonTitleTwo {
+  position: relative;
+  width: 116px;
+  height: 22px;
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.skeletonIndicator {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.skeletonHeaderTitle {
+  position: relative;
+  width: 195px;
+  height: 42px;
+  margin-top: 7px;
+}
+
+.skeletonRelatedTitle {
+  position: relative;
+  width: 150px;
+  height: 22px;
+  margin-bottom: 20px;
+}
+
+.skeletonTagOne {
+  position: relative;
+  width: 123px;
+  height: 28px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skeletonTagTwo {
+  position: relative;
+  width: 88px;
+  height: 28px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skeletonTagThree {
+  position: relative;
+  width: 108px;
+  height: 28px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skeletonTagFour {
+  position: relative;
+  width: 88px;
+  height: 28px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skeletonTagFive {
+  position: relative;
+  width: 75px;
+  height: 28px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skeletonContentTitle {
+  position: relative;
+  width: 150px;
+  height: 22px;
+  margin-bottom: 16px;
+}
+
+.skeletonCardImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skeletonCardInterestLabel {
+  position: absolute;
+  bottom: -10px;
+  left: 8px;
+  width: 56px;
+  height: 22px;
+}
+
+.skeletonCardReadTime {
+  position: absolute;
+  bottom: -10px;
+  right: 8px;
+  width: 39px;
+  height: 43px;
+}
+
+.skeletonCardTitleFirst {
+  position: relative;
+  width: 100%;
+  height: 22px;
+  margin-bottom: 4px;
+}
+
+.skeletonCardTitleSecond {
+  position: relative;
+  width: 80%;
+  height: 22px;
+}
+
+.skeletonCardAvatar {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.skeletonCardAuthor {
+  position: relative;
+  width: 51px;
+  height: 17px;
+  margin-bottom: 6px;
+}
+
+.skeletonCardDate {
+  position: relative;
+  width: 70px;
+  height: 17px;
+}
+
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

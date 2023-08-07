@@ -1,0 +1,326 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.threeCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((3 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.fourCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((4 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.nineCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((9 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.twelveCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((12 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+/**
+ * Event Header
+ */
+
+.eventHeader {
+  position: relative;
+  padding-top: calc((50 / 27) * 100%);
+}
+
+.eventHeader .eventHeaderImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eventHeader .eventHeaderOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #F25A2B;
+  opacity: .8;
+}
+
+.eventHeader .eventHeaderTitle {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  max-width: 132px;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.eventHeader .eventHeaderLink {
+  display: inline-block;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  padding: 5px 12px 7px;
+  background-color: #FFFFFF;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F25A2B;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.eventHeader .eventHeaderLink:hover {
+  background-color: #F25A2B;
+  color: #FFFFFF;
+}
+
+
+/**
+ * Event Not Available
+ */
+
+.eventNotAvailable {
+  position: relative;
+  background-color: #EEEEEE;
+}
+
+.eventNotAvailable.Big {
+  padding-top: calc((10 / 17) * 100%);
+  background-image: url("./handCollage_Big.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.eventNotAvailable.Big .eventNotAvailableContents {
+  padding-top: 100px;
+  padding-left: 56px;
+}
+
+.eventNotAvailable.Big .eventNotAvailableContents h4 {
+  margin-top: 40px;
+}
+
+.eventNotAvailable.Up,
+.eventNotAvailable.Down {
+  padding-top: calc((50 / 27) * 100%);
+}
+
+.eventNotAvailable.Up {
+  background-image: url("./handCollage_Up.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.eventNotAvailable.Up .eventNotAvailableContents {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.eventNotAvailable.Down {
+  background-image: url("./handCollage_Down.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.eventNotAvailable.Down .eventNotAvailableContents {
+  padding-top: 200px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.eventNotAvailable.Up .eventNotAvailableContents h4,
+.eventNotAvailable.Down .eventNotAvailableContents h4 {
+  text-align: center;
+}
+
+.eventNotAvailableContents {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.eventNotAvailableContents h2 {
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #08080F;
+}
+
+.eventNotAvailableContents h4 {
+  margin: 0;
+  font-family: var(--font-family-system);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #08080F;
+}
+
+.subscribeInputBig {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  width: 596px;
+  margin-top: 48px;
+}
+
+.subscribeInputBig input {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  padding: 18px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-size: 1rem;
+  color: #0C0C17;
+}
+
+.subscribeInputBig button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-left: 10px;
+  padding: 19px 30px;
+  background-color: #FFFFFF;
+  border: 2px solid #0C0C17;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-family-system);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.subscribeInputBig button:hover {
+  background-color: #0C0C17;
+  color: #FFFFFF;
+}
+
+.subscribeInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.subscribeInput input {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  color: #0C0C17;
+}
+
+.subscribeInput button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #0C0C17;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-family-system);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.subscribeInput button:hover {
+  background-color: #0C0C17;
+  color: #FFFFFF;
+}

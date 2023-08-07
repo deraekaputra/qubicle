@@ -1,0 +1,791 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.fourCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((4 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sixCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((6 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.eightCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((8 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.readTime {
+  display: inline-block;
+  position: relative;
+  padding: 3px 7px 7px;
+  background-color: #0c0c17;
+  font-family: 'Lora', serif;
+  text-align: center;
+  z-index: 1;
+}
+
+.readTime span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.readTime small {
+  display: block;
+  font-size: 0.6875rem;
+  letter-spacing: 1.2px;
+}
+
+.interestLabel {
+  display: inline-block;
+  position: relative;
+  background-color: #0c0c17;
+  z-index: 1;
+}
+
+.interestLabel a {
+  display: block;
+  padding: 2px 7px 3px;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+
+/**
+* Card
+*/
+
+.card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card:hover .cardImage > .inner .text::after {
+  top: 50%;
+  left: 0;
+  opacity: .7;
+  -webkit-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -moz-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.card:hover .cardImage > .inner .overlay {
+  opacity: .6;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.cardImage > .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardImage > .inner .text {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cardImage > .inner .text::after {
+  display: block;
+  position: absolute;
+  margin: -.65em 0 0;
+  top: 50%;
+  left: 25%;
+  content: attr(data-text);
+  opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -moz-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  transition: opacity 0.3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.cardImage > .inner .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.cardImage .interestLabel {
+  position: absolute;
+  bottom: -10px;
+  left: 8px;
+}
+
+.cardImage .readTime {
+  position: absolute;
+  bottom: -10px;
+  right: 8px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  padding: 16px 8px 8px;
+}
+
+.cardTitle {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.cardTitle {
+  margin-bottom: 4px;
+}
+
+.cardTitle .title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cardTitle .title a {
+  text-decoration: none;
+  color: #0c0c17;
+}
+
+.cardTitle .summary {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #9b9b9b;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-top: 8px;
+  font-size: 0.937rem;
+}
+
+.cardMeta .metaAvatar {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.cardMeta .metaAvatar div {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.cardMeta .metaRight {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.cardMeta .metaRight .metaAuthor {
+  margin-bottom: 2px;
+}
+
+.cardMeta .metaAuthor {
+  color: #0c0c17;
+}
+
+.cardMeta .metaDivider {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.cardMeta .metaDivider::after {
+  content: '\00B7';
+}
+
+.cardMeta .metaDate {
+  color: #9b9b9b;
+}
+
+/**
+* Hero
+*/
+
+.hero {
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.heroTitle {
+  position: relative;
+  margin: 114px 0 90px;
+}
+
+.heroTitle .title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.heroTitle .title span {
+  display: inline-block;
+  position: relative;
+  padding: 3px 4.5px 4px;
+  background-color: #0C0C17;
+}
+
+
+/**
+* Contents
+*/
+
+.contents {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.contentsBorder {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  background-color: #FFFFFF;
+  border: 20px solid #A5A5A5;
+}
+
+.sectionTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0c0c17;
+}
+
+.sectionTitle a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #0C0C17;
+}
+
+.sectionTitle a::before {
+  content: '';
+  position: absolute;
+  top: .150rem;
+  right: -.150rem;
+  bottom: 0;
+  left: -.150rem;
+  height: 80%;
+  background-color: #0C0C17;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.sectionTitle a:hover::before {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: transform .9s cubic-bezier(.19,1,.22,1);
+  -moz-transition: transform .9s cubic-bezier(.19,1,.22,1);
+  transition: transform .9s cubic-bezier(.19,1,.22,1);
+}
+
+.sectionTitle a::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 1px -112px;
+  background-size: 10px 561px;
+  -webkit-transition: all .3s cubic-bezier(.19,1,.22,1);
+  -moz-transition: all .3s cubic-bezier(.19,1,.22,1);
+  transition: all .3s cubic-bezier(.19,1,.22,1);
+}
+
+.sectionTitle a:hover::after {
+  margin-left: 30px;
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+.hashtags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.hashtags .indicator {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+}
+
+.hashtags .tags {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+}
+
+.hashtags .tags .tagWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.hashtags .tags .tagWrapper .tag {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 2px 7px 3px;
+  background-color: #EAEAEA;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #0C0C17;
+  -webkit-transition: background-color .3s ease-in-out;
+  -moz-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.hashtags .tags .tagWrapper .tag:hover {
+  background-color: color(#EAEAEA shade(20%))
+}
+
+.othersContents {
+  margin-bottom: 20px;
+}
+
+.othersContents .othersOne .cardImage {
+  padding-top: calc((260 / 353) * 100%) !important;
+}
+
+.othersContents .othersOne .cardBody {
+  height: 240px;
+}
+
+.othersContents .cardImage {
+  padding-top: calc((136 / 367) * 100%);
+}
+
+.end {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.end h3 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+
+/**
+ * Skeleton Loading
+ */
+
+ .skeleton {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.skeletonPrimary {
+  background-color: #CACACA;
+  background-image: -webkit-gradient(linear, left center, right center, from(#CACACA), color-stop(.2, #E7E7E7), color-stop(.4, #CACACA), to(#CACACA));
+  background-image: -webkit-linear-gradient(left, #CACACA 0%, #E7E7E7 20%, #CACACA 40%, #CACACA 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonSecondary {
+  background-color: #E7E7E7;
+  background-image: -webkit-gradient(linear, left center, right center, from(#E7E7E7), color-stop(.2, #CACACA), color-stop(.4, #E7E7E7), to(#E7E7E7));
+  background-image: -webkit-linear-gradient(left, #E7E7E7 0%, #CACACA 20%, #E7E7E7 40%, #E7E7E7 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonHeroTitle {
+  position: relative;
+  width: 160px;
+  height: 43px;
+  margin-bottom: 20px;
+}
+
+.skeletonIndicator {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.skeletonTagFirst {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 123px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagSecond {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 88px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagThird {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 104px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagFourth {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 108px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagFifth {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 75px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagSixth {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 88px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagSeventh {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 46px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonTagEighth {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 65px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.skeletonContentsBorder {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  bottom: -40px;
+  left: -20px;
+}
+
+.skeletonContentsBorder::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background-color: #FFFFFF;
+}
+
+.skeletonSectionTitle {
+  position: relative;
+  width: 95px;
+  height: 24px;
+  margin-bottom: 18px;
+}
+
+.skeletonCardImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skeletonCardInterestLabel {
+  position: absolute;
+  bottom: -10px;
+  left: 8px;
+  width: 56px;
+  height: 22px;
+}
+
+.skeletonCardReadTime {
+  position: absolute;
+  bottom: -10px;
+  right: 8px;
+  width: 39px;
+  height: 43px;
+}
+
+.skeletonCardTitleFirst {
+  position: relative;
+  width: 100%;
+  height: 22px;
+  margin-bottom: 4px;
+}
+
+.skeletonCardTitleSecond {
+  position: relative;
+  width: 80%;
+  height: 22px;
+  margin-bottom: 9px;
+}
+
+.skeletonCardSummaryFirst {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 4px;
+}
+
+.skeletonCardSummarySecond {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 4px;
+}
+
+.skeletonCardSummaryThird {
+  position: relative;
+  width: 30%;
+  height: 16px;
+}
+
+.skeletonCardAvatar {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.skeletonCardAuthor {
+  position: relative;
+  width: 51px;
+  height: 17px;
+}
+
+.skeletonCardMetaAuthor {
+  position: relative;
+  width: 51px;
+  height: 17px;
+  margin-bottom: 6px;
+}
+
+.skeletonCardDivider {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.skeletonCardDate {
+  position: relative;
+  width: 70px;
+  height: 17px;
+}
+
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

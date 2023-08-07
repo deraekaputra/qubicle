@@ -1,0 +1,125 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+.root {
+  background: #EEEEEE;
+}
+
+.container {
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.subscribeWrapper {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.subscribeTitle {
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: 'Lora', serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #0C0C17;
+}
+
+.subscribeDesc {
+  display: block;
+  position: relative;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #808080;
+}
+
+.subscribeDesc span[role="img"] {
+  margin-left: 5px;
+}
+
+.subscribeAlert {
+  display: block;
+  position: relative;
+  margin-top: 12px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #808080;
+}
+
+.subscribeAlert.error {
+  color: #D50000;
+}
+
+.subscribeAlert.success {
+  color: #2FBD64;
+}
+
+.subscribeInput {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  width: 600px;
+  margin-top: 17px;
+}
+
+.subscribeInput input {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  padding: 18px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #0C0C17;
+}
+
+.subscribeInput button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-left: 10px;
+  padding: 19px 30px;
+  background-color: #FFFFFF;
+  border: 2px solid #0C0C17;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.subscribeInput button:hover {
+  background-color: #0C0C17;
+  color: #FFFFFF;
+}
+
+.subscribeImage {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  max-width: 100%;
+}

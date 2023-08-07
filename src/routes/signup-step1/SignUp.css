@@ -1,0 +1,389 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css';
+
+.root {
+  display: flex;
+  position: relative;
+}
+
+.root::before,
+.root::after {
+  content: '';
+  display: table;
+}
+
+.root::after {
+  clear: both;
+}
+
+.form {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 33.33333333%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  background-clip: padding-box !important;
+}
+
+.form .formWrapper {
+  height: 100%;
+}
+
+.form .formWrapper .formContents {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.form .formWrapper .formContents .formLogo {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.form .formWrapper .formContents .formTitle {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.form .formWrapper .formContents .formTitle h1 {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formTitle h3 {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formTitle span {
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formTitle span a {
+  text-decoration: underline;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.form .formWrapper .formContents .formGroup .passRevealer {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-size: 0.687rem;
+  font-weight: bold;
+  color: #9B9B9B;
+  cursor: pointer;
+}
+
+.form .formWrapper .formContents .formGroup .passRevealer:hover {
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .passRevealer:hover svg path {
+  fill: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .passRevealer svg {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+
+.form .formWrapper .formContents .formGroup.formBirthday {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.form .formWrapper .formContents .formGroup.formBirthday .formLabel {
+  width: 100%;
+}
+
+.form .formWrapper .formContents .formGroup.formBirthday .formSelect {
+  width: calc(50% - 10px);
+  margin-right: 10px
+}
+
+.form .formWrapper .formContents .formGroup.formBirthday .formInput[id^="day"] {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.form .formWrapper .formContents .formGroup.formBirthday .formInput[id^="year"] {
+  width: calc(30% - 10px);
+}
+
+.form .formWrapper .formContents .formGroup .formLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .formInput {
+  width: 100%;
+  margin: 0;
+  padding: 7px 12px 8px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .formInput:focus {
+  border-color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .formInput.error {
+  border-color: #D50000;
+}
+
+.form .formWrapper .formContents .formGroup .formSelect {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.form .formWrapper .formContents .formGroup .formSelect::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid #9B9B9B;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #9B9B9B;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form .formWrapper .formContents .formGroup .formSelect select {
+  width: 100%;
+  margin: 0;
+  padding: 7px 12px 8px;
+  background-color: transparent;
+  border: 2px solid #9B9B9B;
+  border-radius: 0;
+  outline: none;
+  font-size: 0.812rem;
+  color: #08080F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form .formWrapper .formContents .formGroup .formSelect select:focus {
+  border-color: #08080F;
+}
+
+.form .formWrapper .formContents .formGroup .formSelect.error select {
+  border-color: #D50000;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio .radio {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio .radio:first-child {
+  margin-right: 40px;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio .radio input,
+.form .formWrapper .formContents .formGroup .formRadio .radio label {
+  display: inline-block;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio .radio input {
+  margin-right: 10px;
+}
+
+.form .formWrapper .formContents .formGroup .formRadio .radio label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formFooter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 32px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.form .formWrapper .formContents .formFooter button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 9px 12px 9px;
+  background-color: transparent;
+  border: 2px solid #08080F;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.form .formWrapper .formContents .formFooter button:hover {
+  background-color: #08080F; 
+  color: #FFFFFF;
+}
+
+.form .formWrapper .formContents .formFooter button:focus,
+.form .formWrapper .formContents .formFooter button:active {
+  outline: none;
+}
+
+.form .formWrapper .formContents .formFooter button:disabled {
+  background: transparent;
+  opacity: .3;
+  cursor: not-allowed;
+  color: inherit;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.form .formWrapper .formContents .formFooter span {
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.form .formWrapper .formContents .formFooter span a {
+  text-decoration: underline;
+  color: #08080F;
+}
+
+.formAlert {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.687rem;
+  color: #08080F;
+}
+
+.formAlert.error {
+  color: #D50000;
+}
+
+.signupTrending {
+  float: none;
+  display: flex;
+  flex-direction: column;
+  width: 66.66666667%;
+  position: fixed;
+  right: 0;
+  min-height: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-clip: padding-box !important;
+}
+
+.heroStory {
+  height: 100vh;
+}
+
+.heroStory a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heroStory a .heroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroStory a .heroTitle {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.heroStory a .heroTitle span {
+  display: inline;
+  padding: 0 5px;
+  background-color: #08080F;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  white-space: pre-wrap;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}

@@ -1,0 +1,158 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+.root {
+  position: relative;
+}
+
+
+/**
+* Card
+*/
+
+.eventCardHeader {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: calc((4 / 3) * 100%);
+}
+
+.eventCardHeader:hover .eventCardDate {
+  opacity: 0;
+}
+
+.eventCardImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eventCardDate {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 2px 6px 4px;
+  background-color: #0C0C17;
+  font-family: var(--font-family-main);
+  text-align: center;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  z-index: 1;
+}
+
+.eventCardDate span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.eventCardDate small {
+  display: block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #F25A2B
+}
+
+.eventCardBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  padding-top: 11px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+}
+
+.eventCardTitle {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  height: 60px;
+  margin: 0;
+  margin-bottom: 14px;
+  overflow: hidden;
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.eventCardTitle a {
+  text-decoration: none;
+  color: #0C0C17;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.eventCardTitle a:hover {
+  color: #F25A2B;
+}
+
+.eventCardMeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  font-size: 0.937rem;
+}
+
+.eventCardMeta > .metaBrandAvatar {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.eventCardMeta > .metaBrandAvatar div {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.eventCardMeta > .metaRight {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.eventCardMeta > .metaRight > .metaBrand {
+  margin-bottom: 2px;
+}
+
+.eventCardMeta > .metaRight > .metaBrand {
+  color: #9B9B9B;
+}
+
+.eventCardMeta > .metaRight > .metaPlace {
+  color: #4A4A4A;
+}

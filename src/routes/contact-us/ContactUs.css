@@ -1,0 +1,344 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+/**
+* Hero
+*/
+
+.hero {
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.heroTitle {
+  position: relative;
+  margin: 120px 0 164px;
+}
+
+.heroTitle .title {
+  max-width: 500px;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.heroTitle .title span {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 8px;
+  padding: 3px 4.5px 4px;
+  background-color: #0C0C17;
+}
+
+.heroTitle .title span span[role="img"] {
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+* Contents
+*/
+
+.contents {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.contentsBorder {
+  position: absolute;
+  top: 100px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  border: 20px solid #08080F;
+}
+
+.contactCover {
+  display: block;
+  position: relative;
+  margin-top: -100px;
+  padding-top: calc((141 / 320) * 100%);
+  overflow: hidden;
+}
+
+.contactCover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .84);
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  z-index: 1;
+}
+
+.contactCover .contactCoverText {
+  display: block;
+  position: absolute;
+  margin: -.65em 0 0;
+  top: 50%;
+  left: 25%;
+  opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -moz-transition: opacity .3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  transition: opacity 0.3s cubic-bezier(.645,.045,.355,1), left 0s linear .3s, transform 0s linear 0.3s;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  font-size: 6.875rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.contactCover:hover::before {
+  opacity: .6;
+}
+
+.contactCover:hover .contactCoverText {
+  top: 50%;
+  left: 0;
+  opacity: .7;
+  -webkit-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -moz-transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  transition: opacity .4s cubic-bezier(.645,.045,.355,1), left 20s linear, transform 20s linear;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.contactCover .contactCoverImage {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.contactContent {
+  position: relative;
+  margin-top: 24px;
+  padding: 48px 114px;
+  text-align: center;
+}
+
+.contactContent h1 {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 46px;
+  color: #0C0C17;
+}
+
+.contactContent p {
+  margin: 0;
+  margin-top: 24px;
+  padding-right: 58px;
+  padding-left: 58px;
+  font-family: var(--font-family-main);
+  font-size: 1.125rem;
+  line-height: 26px;
+  color: rgba(0, 0, 0, .84);
+}
+
+.contentsDivider {
+  position: relative;
+  margin-top: 48px;
+}
+
+.contentsDivider svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.contactForm {
+  position: relative;
+  padding-right: 175px;
+  padding-bottom: 100px;
+  padding-left: 175px;
+}
+
+.contactForm .formGroup {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 32px;
+}
+
+.contactForm .formGroup .formLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formInput {
+  width: 100%;
+  margin: 0;
+  padding: 7px 12px 8px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formInput:focus {
+  border-color: #08080F;
+}
+
+.contactForm .formGroup .formInput.error {
+  border-color: #D50000;
+}
+
+.contactForm .formGroup .formTextArea {
+  width: 100%;
+  height: 216px;
+  margin: 0;
+  padding: 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  outline: none;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formTextArea:focus {
+  border-color: #08080F;
+}
+
+.contactForm .formGroup .formTextArea.error {
+  border-color: #D50000;
+}
+
+.contactForm .formInline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.contactForm .formInline.formData .formGroup {
+  width: calc(50% - 15px);
+}
+
+.contactForm .formInline .formGroup {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-top: 0;
+}
+
+.contactForm .formButton {
+  position: relative;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.contactForm .formButton button {
+  display: inline-block;
+  padding: 5px 12px 7px;
+  background-color: transparent;
+  border: 2px solid #08080F;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #08080F;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contactForm .formButton button:hover {
+  background-color: #08080F; 
+  color: #FFFFFF;
+}
+
+.contactForm .formButton button:focus,
+.contactForm .formButton button:active {
+  outline: none;
+}
+
+.contactForm .formButton button:disabled {
+  background: transparent;
+  opacity: .3;
+  cursor: not-allowed;
+  color: inherit;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.formAlert {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.formAlert.error {
+  color: #D50000;
+}
+
+.contactSent {
+  margin-top: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #97F384;
+  text-align: center;
+}
+
+.contactSent h3 {
+  margin: 0;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  font-weight: bold;
+  color: #248A0F;
+}

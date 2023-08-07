@@ -1,0 +1,155 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  background: #08080F;
+}
+
+.container {
+  width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.footerLogo {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 30px;
+}
+
+.footerLogo img {
+  max-width: 100%;
+}
+
+.footerMenu {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.footerMenu small {
+  font-family: 'Lora', serif;
+  font-size: 0.687rem;
+  color: #6D6D6D;
+}
+
+.footerNav {
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #404040;
+}
+
+.footerNav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.footerNav li {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 40px;
+}
+
+.footerNav li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.812rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1.62px;
+  color: #FFFFFF;
+}
+
+.footerSocial {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-left: 30px;
+}
+
+.footerSocial span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.812rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.footerSocial ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  margin-top: 10px;
+}
+
+.footerSocial li {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 30px;
+}
+
+.footerSocial li:last-child {
+  margin-right: 0;
+}
+
+.footerSocial li a {
+  display: inline-block;
+}
+
+.footerSocial li a i {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-size: 25px 1404px;
+}
+
+.footerSocial li a i.facebook {
+  background-position: 0px -330px;
+}
+
+.footerSocial li a i.instagram {
+  background-position: 0px -440px;
+}
+
+.footerSocial li a i.twitter {
+  background-position: 0px -550px;
+}
