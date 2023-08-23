@@ -1,0 +1,178 @@
+.readTime {
+    display: inline-block;
+    position: relative;
+    padding: 3px 7px 7px;
+    background-color: #0c0c17;
+    font-family: var(--font-family-lora);
+    text-align: center;
+    z-index: 1;
+}
+
+.readTime span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.readTime small {
+    display: block;
+    font-size: 0.6875rem;
+    letter-spacing: 1.2px;
+}
+
+.interestLabel {
+    display: inline-block;
+    position: relative;
+    background-color: #0c0c17;
+    z-index: 1;
+}
+
+.interestLabel a {
+    display: block;
+    padding: 2px 7px 3px;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+
+/**
+ * Headline
+ */
+
+.headline {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.headlineTop {
+    position: relative;
+}
+
+.hero {
+    position: relative;
+}
+
+.heroWrapper {
+    position: relative;
+    height: calc((141 / 320) * 100vw);
+}
+
+.heroWrapper .heroImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroWrapper .heroTitle {
+    position: absolute;
+    right: 0;
+    bottom: 77px;
+    left: 0;
+}
+
+.heroTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heroTitle .heroItem {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.heroTitle .readTime {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    z-index: 4;
+}
+
+.heroTitle .interestLabel {
+    margin-bottom: 5px;
+}
+
+.heroTitle .title {
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: var(--font-family-lora);
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.heroTitle .title a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.heroTitle .title a:hover {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.heroTitle .title a:hover span i {
+    right: -1px;
+    bottom: -1px;
+    -webkit-transform: translate3d(5px, 5px, 0);
+    -moz-transform: translate3d(5px, 5px, 0);
+    transform: translate3d(5px, 5px, 0);
+}
+
+.heroTitle .title a span {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5px;
+    padding: 3px 4.5px 4px;
+    background-color: #0C0C17;
+}
+
+.heroTitle .title a span i {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 0 7px 7px 0;
+    -webkit-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s;
+    -moz-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.heroTitle .title a span i::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background-color: #0C0C17;
+}
+
+.heroTitle .author {
+    padding: 2px 7px 3px;
+    background-color: #0C0C17;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    color: #FFFFFF;
+}

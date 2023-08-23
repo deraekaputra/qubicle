@@ -1,0 +1,134 @@
+.root {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+/**
+ * Nav
+ */
+
+.nav {
+    display: block;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav.interests {
+    order: 0;
+    flex: 0 1 auto;
+    margin-left: 35px;
+}
+
+.nav.interests ul li {
+    flex: 1 1 auto;
+}
+
+.nav.interests ul li:last-child .panel {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav.interests ul li:hover>.panel {
+    display: block;
+}
+
+.nav.actions {
+    order: 0;
+    flex: 1 1 auto;
+}
+
+.nav.actions ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-end;
+}
+
+.nav.actions ul li {
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    position: relative;
+}
+
+.link {
+    vertical-align: middle;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link:active,
+.link:visited {
+    color: inherit;
+}
+
+.link.interest {
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.62px;
+    line-height: 64px;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.link.interest:hover {
+    color: initial;
+}
+
+.link.action {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.link.action svg {
+    display: block;
+}
+
+.link.button {
+    display: block;
+    margin-right: 20px;
+    margin-left: 30px;
+    padding: 7px 12px 8px;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    font-family: var(--font-family-montserrat);
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.link.button:hover {
+    background-color: #FFFFFF;
+    color: #08080F;
+}
+
+.link.button:focus,
+.link.button:active {
+    outline: none;
+}

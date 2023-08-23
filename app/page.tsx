@@ -1,94 +1,126 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import type { Metadata } from 'next'
+import pageStyles from '../styles/page.module.css'
+import homeStyles from '../styles/home.module.css'
+import Header from '@/components/header'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Qubicle Home',
+}
 
 export default function Home() {
+  const state = {
+    intmusic: '#F8DB65',
+  }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={pageStyles.root}>
+      <Header/>
+      <div className={homeStyles.headline}>
+        <div className={homeStyles.headlineTop}>
+          <div className={homeStyles.hero}>
+            <div className={homeStyles.heroWrapper}>
+              <div
+                className={homeStyles.heroImage}
+                style={{
+                  backgroundImage: `url(https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
+                }}
+              />
+              <div className={`${pageStyles.container} ${homeStyles.heroTitle}`}>
+                <div className={homeStyles.readTime}>
+                  <span>10</span>
+                  <small
+                    style={{
+                      color: state.intmusic,
+                    }}
+                  >
+                    MIN
+                  </small>
+                </div>
+                <div className={`${homeStyles.heroItem} ${homeStyles.interestLabel}`}>
+                  <Link
+                    href="/"
+                    style={{
+                      color: state.intmusic,
+                    }}
+                  >
+                    MUSIC
+                  </Link>
+                </div>
+                <h1 className={`${homeStyles.heroItem} ${homeStyles.title}`}>
+                  <Link href="/story">
+                    <span>
+                      Gorillaz<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Lepas<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      2<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Lagu<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      dari<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Album<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Baru<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      &lsquo;The<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Now<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                    <span>
+                      Now&rsquo;<i
+                        style={{ borderColor: state.intmusic }}
+                      />
+                    </span>
+                  </Link>
+                </h1>
+                <span className={`${homeStyles.heroItem} ${homeStyles.author}`}>
+                  John Doe
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className={homeStyles.headlineBottom}>
+          <div className={pageStyles.container}>
+            <div className={pageStyles.row}>
+              <div className={pageStyles.threeCol}>
+              </div>
+              <div className={pageStyles.threeCol}>
+              </div>
+              <div className={pageStyles.threeCol}>
+              </div>
+              <div className={pageStyles.threeCol}>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
